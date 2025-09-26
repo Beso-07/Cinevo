@@ -1,8 +1,14 @@
 import 'package:cinevo/core/utils/app_router.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Cinevo());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const Cinevo(), // Wrap your app
+    ),
+  );
 }
 
 class Cinevo extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:cinevo/features/home/views/widgets/banners_list.dart';
 import 'package:cinevo/features/home/views/widgets/main_category_list.dart';
 import 'package:cinevo/features/home/views/widgets/custom_app_bar.dart';
+import 'package:cinevo/features/home/views/widgets/movies_horizontal_list.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,7 +18,7 @@ class HomeView extends StatelessWidget {
         height: height,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.orange.withOpacity(.8), Colors.white],
+            colors: [Colors.orange.withOpacity(.8), Colors.black],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -31,6 +32,7 @@ class HomeView extends StatelessWidget {
               const MainCategoryList(),
               SizedBox(height: height * .01),
               const BannersList(),
+              MoviesHorizontalList(),
             ],
           ),
         ),

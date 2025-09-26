@@ -7,4 +7,6 @@ class ImagesPath {
   static const google = "assets/images/google.png";
   static const facebook = "assets/images/facebook.png";
   static const x = "assets/images/x.png";
+  static const testImage =
+      "https://m.media-amazon.com/images/I/61CRq2R6i4L._AC_SL1024_.jpg";
 }
