@@ -1,7 +1,4 @@
-import 'package:cinevo/features/home/views/widgets/banners_list.dart';
-import 'package:cinevo/features/home/views/widgets/main_category_list.dart';
-import 'package:cinevo/features/home/views/widgets/custom_app_bar.dart';
-import 'package:cinevo/features/home/views/widgets/movies_horizontal_list.dart';
+import 'package:cinevo/features/home/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -11,7 +8,6 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-
     return Scaffold(
       body: Container(
         width: width,
@@ -23,19 +19,7 @@ class HomeView extends StatelessWidget {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(vertical: 0),
-          child: Column(
-            children: [
-              const CustomAppBar(),
-              SizedBox(height: height * .01),
-              const MainCategoryList(),
-              SizedBox(height: height * .01),
-              const BannersList(),
-              MoviesHorizontalList(),
-            ],
-          ),
-        ),
+        child: const HomeViewBody(),
       ),
     );
   }

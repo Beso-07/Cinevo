@@ -8,38 +8,41 @@ class MoviesHorizontalList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Comedy', style: Styles.textStyle18),
-              InkWell(
-                onTap: () {},
-                child: Text('Sea All', style: Styles.textStyle18),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 8),
-          child: SizedBox(
-            height: 180,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: CustomMovieCover(movieImage: ImagesPath.testImage),
-                );
-              },
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Comedy', style: Styles.textStyle18),
+                InkWell(
+                  onTap: () {},
+                  child: Text('Sea All', style: Styles.textStyle18),
+                ),
+              ],
             ),
           ),
-        ),
-      ],
+          Padding(
+            padding: const EdgeInsets.only(right: 8, top: 8),
+            child: SizedBox(
+              height: 180,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 8),
+                    child: CustomMovieCover(movieImage: ImagesPath.testImage),
+                  );
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
