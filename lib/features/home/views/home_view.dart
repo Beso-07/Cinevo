@@ -21,6 +21,7 @@ class HomeView extends StatelessWidget {
         ),
         child: const HomeViewBody(),
       ),
+      //bottomNavigationBar: MyNavBar(),
     );
   }
 }

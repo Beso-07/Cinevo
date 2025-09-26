@@ -6,7 +6,7 @@ void main() {
   runApp(
     DevicePreview(
       enabled: true,
-      builder: (context) => const Cinevo(), // Wrap your app
+      builder: (context) => const Cinevo(), 
     ),
   );
 }
